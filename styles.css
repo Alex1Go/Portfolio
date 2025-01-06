@@ -6,7 +6,7 @@ body {
     font-size: 18px;
     line-height: 1.2;
     font-style: normal;
-    color: white;
+    color: #bfc2cb;
 }
 
 h1,
@@ -38,7 +38,7 @@ a {
 }
 
 .container {
-    width: 1240px;
+    width: 1280px;
     padding-left: 20px;
     padding-right: 20px;
     margin-left: auto;
@@ -55,20 +55,91 @@ a {
     padding: 30px 0;
 }
 
+.nav-item {
+    position: relative;
+    padding: 4px 16px;
+    box-shadow: 0 6px 9px 0 rgba(0, 0, 0, 0.6), 0 2px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.04);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background: rgba(0, 0, 0, 0.1), linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.05) 100%);
+
+}
+
+/* .nav-item:active {
+    background-color: #121317;
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.6),
+        inset 0 -4px 8px rgba(0, 0, 0, 0.3);
+    transform: translateY(2px);
+} */
+
+.nav-item:active {
+    transform: translateY(2px);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6),
+        0 2px 4px 0 rgba(0, 0, 0, 0.12),
+        0 1px 1px 0 rgba(0, 0, 0, 0.04);
+    background-color: #121317;
+}
+
+/* Псевдоэлемент для отблеска */
+.nav-item::after {
+    content: "";
+    position: absolute;
+    top: -150%;
+    left: -150%;
+    width: 150%;
+    height: 70%;
+    background: linear-gradient(45deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.5) 48%,
+            rgba(255, 255, 255, 0.8) 50%,
+            rgba(255, 255, 255, 0.5) 52%,
+            rgba(255, 255, 255, 0) 100%);
+    transform: rotate(-45deg);
+    opacity: 0;
+    filter: blur(8px);
+    pointer-events: none;
+}
+
+.nav-item:hover,
+.nav-item:focus {
+    background:
+        rgba(255, 255, 255, 0.1),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.05) 100%);
+
+}
+
+.nav-item:hover::after,
+.nav-item:focus::after {
+    opacity: 1;
+    animation: light-sweep 1.5s linear infinite;
+}
+
+@keyframes light-sweep {
+    0% {
+        top: -150%;
+        left: -150%;
+    }
+
+    100% {
+        top: 150%;
+        left: 150%;
+    }
+}
+
 .nav-link,
 .item-link {
     font-family: "Roboto", sans-serif;
-    font-weight: 600;
-    font-size: 28px;
+    font-weight: 400;
+    font-size: 20px;
     line-height: 1.2;
     font-style: normal;
     color: white;
     text-transform: uppercase;
 }
 
-/* .nav-item {
-    cursor: pointer;
-} */
 
 .nav-list {
     display: flex;
@@ -88,14 +159,108 @@ a {
     background-repeat: no-repeat;
     background-size: cover;
     height: 500px;
-    max-width: 1160px;
+    max-width: 1140px;
     margin: 0 auto;
     border-radius: 40px;
     padding: 30px;
     backdrop-filter: blur(24px);
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.6), 0 3px 8px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.04);
-
+    display: flex;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    text-align: center;
 }
+
+/* .line {
+    width: 100%;
+    height: 2px;
+    background: #000;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: line-expand 1s ease-in-out forwards;
+} */
+
+.fon-box {
+    margin: auto 0;
+    max-width: 500px;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fade-in 1s ease-in-out forwards;
+    animation-delay: 1s;
+}
+
+.fon-title {
+    font-size: 1.5rem;
+    transform: translateY(100%);
+    opacity: 0;
+    animation: slide-up-title 1s ease-in-out forwards;
+    animation-delay: 1.5s;
+}
+
+.fon-name {
+    font-size: 2.5rem;
+    font-weight: bold;
+    transform: translateY(-100%);
+    opacity: 0;
+    animation: slide-down-name 1s ease-in-out forwards;
+    animation-delay: 2s;
+}
+
+.fon-text {
+    font-size: 1rem;
+    line-height: 1.5;
+    transform: translateY(50px);
+    opacity: 0;
+    animation: slide-down-text 1s ease-in-out forwards;
+    animation-delay: 2.5s;
+}
+
+@keyframes line-expand {
+    to {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes fade-in {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-up-title {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-down-name {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-down-text {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+
+
+
 
 .footer {
     background-image: url(./images/fon_3.png);
@@ -103,7 +268,7 @@ a {
     background-repeat: no-repeat;
     background-size: cover;
     /* height: 100%; */
-    max-width: 100%;
+    width: 1240px;
     /* padding-bottom: 950px; */
     border-radius: 40px;
 }
