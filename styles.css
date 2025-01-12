@@ -55,21 +55,21 @@ a {
 }
 
 .nav {
-    position: fixed;
+    /* position: fixed; */
     display: flex;
     max-width: 1000px;
-    left: 50%;
+    /* left: 50%;
     transform: translate(-50%);
     z-index: 100;
+    padding: 30px 0; */
     padding: 30px 0;
 }
 
 .nav-item {
     position: relative;
-    padding: 4px 16px;
+    padding: 2px 14px;
     box-shadow: 0 6px 9px 0 rgba(0, 0, 0, 0.6), 0 2px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 transparent;
     border: 2.5px solid rgb(32, 33, 37);
-    ;
     border-radius: 20px;
     cursor: pointer;
     overflow: hidden;
@@ -117,8 +117,9 @@ a {
 
 .nav-item:hover,
 .nav-item:focus {
-    background:
-        #2c2d33;
+    /* background:
+        #2c2d33; */
+    background: linear-gradient(180deg, rgb(40, 44, 58) 0%, rgb(21, 23, 26) 100%);
 }
 
 .nav-item:hover::after,
@@ -139,30 +140,32 @@ a {
     }
 }
 
-.nav-link,
-.item-link {
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 1.2;
-    font-style: normal;
-    color: white;
-    text-transform: uppercase;
-}
-
-
 .nav-list {
     display: flex;
     margin-left: auto;
     gap: 20px;
 }
 
-
-.hero {
-    padding-top: 100px;
+.nav-link,
+.item-link {
+    font-family: "Comfortaa", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.2;
+    font-style: normal;
+    text-transform: uppercase;
+    color: #bfc2cb;
 }
 
-.fon {
+
+
+
+
+/* .hero {
+    padding-top: 100px;
+} */
+
+.hero-fon {
     background: radial-gradient(100% 100% at -100% 0%, #fff 0%, rgba(255, 255, 255, 0.1) 100%);
     background-image: url(./images/fon_2.png);
     background-position: center;
@@ -172,7 +175,7 @@ a {
     max-width: 1140px;
     margin: 0 auto;
     border-radius: 40px;
-    padding: 30px;
+    /* padding: 100px; */
     backdrop-filter: blur(24px);
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.6), 0 3px 8px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.04);
     display: flex;
@@ -194,16 +197,16 @@ a {
     animation: line-expand 1s ease-in-out forwards;
 } */
 
-.fon-box {
+.hero-box {
     margin: auto 0;
     max-width: 500px;
-    opacity: 0;
+    /* opacity: 0;
     transform: translateY(50px);
     animation: fade-in 1s ease-in-out forwards;
-    animation-delay: 1s;
+    animation-delay: 1s; */
 }
 
-.fon-title {
+.hero-title {
     font-size: 1.5rem;
     transform: translateY(100%);
     opacity: 0;
@@ -211,36 +214,29 @@ a {
     animation-delay: 1.5s;
 }
 
-.fon-name {
-    font-size: 2.5rem;
-    font-weight: bold;
+.hero-name {
+    font-size: 40px;
+    font-weight: 900;
     transform: translateY(-100%);
     opacity: 0;
     animation: slide-down-name 1s ease-in-out forwards;
     animation-delay: 2s;
 }
 
-.fon-text {
-    font-size: 1rem;
-    line-height: 1.5;
-    transform: translateY(50px);
-    opacity: 0;
-    animation: slide-down-text 1s ease-in-out forwards;
-    animation-delay: 2.5s;
-}
 
-@keyframes line-expand {
+
+/* @keyframes line-expand {
     to {
         transform: scaleX(1);
     }
-}
+} */
 
-@keyframes fade-in {
+/* @keyframes fade-in {
     to {
         opacity: 1;
         transform: translateY(0);
     }
-}
+} */
 
 @keyframes slide-up-title {
     to {
@@ -263,13 +259,66 @@ a {
     }
 }
 
+.hero-img {
+    width: 400px;
+    height: 500px;
+    margin-left: auto;
+    transform: translateX(100%);
+    opacity: 0;
+    animation: slide-left 1s ease-in-out forwards;
+    animation-delay: 2s;
+    /* box-shadow: rgba(128, 129, 129, 0.4) 5px 5px, rgba(146, 148, 147, 0.3) 10px 10px, rgba(131, 133, 132, 0.2) 15px 15px, rgba(155, 161, 221, 0.1) 20px 20px, rgba(15, 14, 22, 0.05) 25px 25px; */
+}
 
+@keyframes slide-left {
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
 
+.about-box {
+    max-width: 1000px;
 
+}
 
+.about-text {
+    margin-top: 30px;
+    text-align: center;
+    transform: translateY(50px);
+    opacity: 0;
+    animation: slide-down-text 1s ease-in-out forwards;
+    animation-delay: 2.5s;
+}
 
+.fon-skill {
+    background-image: url(/images/fon.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 510px;
+    max-width: 1240px;
+    padding: 150px 100px;
 
+}
 
+h2 {
+    font-family: "Open Sans", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 30px;
+    line-height: 1.2;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.skill-svg {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
 
 
 .footer {
