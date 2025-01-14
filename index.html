@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
         integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./styles.css" />
 </head>
 
@@ -91,28 +92,29 @@
                 <!-- </div> -->
             </div>
         </section>
-        <section>
+        <section id="projects">
             <div>
                 <h2>Projects</h2>
                 <div class="blog-slider">
                     <div class="blog-slider__wrp swiper-wrapper">
                         <div class="blog-slider__item swiper-slide">
                             <div class="blog-slider__img">
-
-                                <img src="/images/iam.jpg" alt="" />
+                                <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1535759872/kuldar-kalvik-799168-unsplash.webp"
+                                    alt="">
                             </div>
                             <div class="blog-slider__content">
                                 <span class="blog-slider__code">26 December 2019</span>
                                 <div class="blog-slider__title">Lorem Ipsum Dolor</div>
                                 <div class="blog-slider__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                                     Recusandae
-                                    voluptate repellendus magni illo ea animi? </div>
+                                    voluptate repellendus magni illo ea animi?</div>
                                 <a href="#" class="blog-slider__button">READ MORE</a>
                             </div>
                         </div>
                         <div class="blog-slider__item swiper-slide">
                             <div class="blog-slider__img">
-                                <img src="/images/iam.jpg" alt="" />
+                                <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1535759871/jason-leung-798979-unsplash.webp"
+                                    alt="">
                             </div>
                             <div class="blog-slider__content">
                                 <span class="blog-slider__code">26 December 2019</span>
@@ -123,10 +125,10 @@
                                 <a href="#" class="blog-slider__button">READ MORE</a>
                             </div>
                         </div>
-
                         <div class="blog-slider__item swiper-slide">
                             <div class="blog-slider__img">
-                                <img src="/images/iam.jpg" alt="" />
+                                <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1535759871/alessandro-capuzzi-799180-unsplash.webp"
+                                    alt="">
                             </div>
                             <div class="blog-slider__content">
                                 <span class="blog-slider__code">26 December 2019</span>
@@ -137,10 +139,10 @@
                                 <a href="#" class="blog-slider__button">READ MORE</a>
                             </div>
                         </div>
-
                     </div>
                     <div class="blog-slider__pagination"></div>
                 </div>
+
             </div>
         </section>
     </main>
@@ -153,8 +155,33 @@
         </div>
 
     </footer> -->
-    <script src="/app.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./app.js"></script>
+    <script>
+        // Плавная прокрутка с использованием JavaScript
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault(); // Останавливаем стандартное поведение ссылки
+                const targetId = this.getAttribute('href').slice(1); // Убираем символ #
+                const targetElement = document.getElementById(targetId); // Находим элемент с нужным ID
+
+                if (targetElement) {
+                    const topOffset = targetElement.offsetTop; // Находим расстояние от начала страницы
+
+                    // Плавная анимация прокрутки
+                    window.scrollTo({
+                        top: topOffset,
+                        behavior: 'smooth' // Задаем поведение прокрутки
+                    });
+                }
+            });
+        });
+    </script>
+
 </body>
 
 </html>

@@ -15,3 +15,19 @@ const swiper = new Swiper('.blog-slider', {
     clickable: true,
   },
 });
+
+// document.querySelectorAll('nav a').forEach(link => {
+//   link.addEventListener('click', function (e) {
+//     e.preventDefault(); // Отключаем стандартное поведение ссылки
+//     const targetId = this.getAttribute('href').slice(1); // Убираем символ #
+//     const targetElement = document.getElementById(targetId); // Находим элемент с нужным ID
+
+//     if (targetElement) {
+//       // Плавная прокрутка с использованием ScrollIntoView
+//       targetElement.scrollIntoView({
+//         behavior: 'smooth',
+//         block: 'start',
+//       });
+//     }
+//   });
+// });
