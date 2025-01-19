@@ -37,7 +37,6 @@
                     <div class="hero-box">
                         <p class="hero-title">Hello, my name <br>Oleksii Hostryk and I am a</p>
                         <h1 class="hero-name">Fullstack Developer</h1>
-                        <p></p>
                     </div>
                     <img class="hero-img" src="/images/iam2.png" alt="foto" />
                 </div>
@@ -47,14 +46,18 @@
         <section style="padding-top: 100px" id="about">
             <div class="container about-box">
                 <h2>About</h2>
-                <p class="about-text">
-                    I am creating modern, productive and convenient web applications.
-                    I like to solve complex problems, turning ideas into working solutions.
-                    I specialize in developing the client and server parts:
-                    <br>Frontend: React, JavaScript
-                    <br>Backend: Node.js, databases
-                    <br>My goal is to develop technologies that make life easier.
-                </p>
+                <div style="display: flex; gap: 30px;">
+                    <img src="./images/dev3.png" alt="devices" style="width: 400px;" />
+                    <p class="about-text">
+                        I am creating modern, productive and convenient web applications.
+                        I like to solve complex problems, turning ideas into working solutions.
+                        I specialize in developing the client and server parts:
+                        <br>Frontend: React, JavaScript
+                        <br>Backend: Node.js, databases
+                        <br>My goal is to develop technologies that make life easier.
+                    </p>
+                </div>
+
             </div>
         </section>
         <section style="padding-top: 100px">
@@ -158,10 +161,10 @@
                                 <div class="blog-slider__title">Simply-Chocolate</div>
                                 <div class="blog-slider__text">One-page website for a store selling and producing
                                     chocolate with a responsive design.</div>
-                                <div class="blog-slider__button">
-                                    <a href="alex1go.github.io/Chocolate/">OPEN</a>
-                                    <a href="https://github.com/Alex1Go/Chocolate">
-                                        <svg width="28" height="28">
+                                <div style="align-items: center;">
+                                    <a class="blog-slider__button" href="https://alex1go.github.io/Chocolate/">OPEN</a>
+                                    <a class="blog-slider__button" href="https://github.com/Alex1Go/Chocolate">
+                                        <svg width="28" height="28" style="background: beige; border-radius: 50px">
                                             <use href="./images/sprite.svg.svg#icon-github"></use>
                                         </svg>
                                     </a>
@@ -176,14 +179,14 @@
         </section>
     </main>
 
-    <!-- <footer>
+    <footer>
         <div class="container ">
             <div class="footer ">
                 <h2 class="footer-text">Contacts</h2>
             </div>
         </div>
 
-    </footer> -->
+    </footer>
 
 
 

@@ -207,6 +207,7 @@ a {
 .hero-fon {
     background: radial-gradient(100% 100% at -100% 0%, #fff 0%, rgba(255, 255, 255, 0.1) 100%);
     background-image: url(./images/fon_2.png);
+
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -222,6 +223,7 @@ a {
     text-align: center;
     overflow: hidden;
     text-align: center;
+
 }
 
 /* .line {
@@ -238,7 +240,7 @@ a {
 
 .hero-box {
     margin: auto 0;
-    max-width: 500px;
+    max-width: 700px;
     /* opacity: 0;
     transform: translateY(50px);
     animation: fade-in 1s ease-in-out forwards;
@@ -246,20 +248,25 @@ a {
 }
 
 .hero-title {
-    font-size: 1.5rem;
-    transform: translateY(100%);
-    opacity: 0;
-    animation: slide-up-title 1s ease-in-out forwards;
-    animation-delay: 1.5s;
-}
+    font-weight: 500;
+    font-size: 34px;
 
-.hero-name {
-    font-size: 40px;
-    font-weight: 900;
+    text-align: left;
+    margin-bottom: 10px;
     transform: translateY(-100%);
     opacity: 0;
     animation: slide-down-name 1s ease-in-out forwards;
     animation-delay: 2s;
+}
+
+.hero-name {
+    font-size: 46px;
+    font-weight: 900;
+    transform: translateY(100%);
+    opacity: 0;
+    animation: slide-up-title 1s ease-in-out forwards;
+    animation-delay: 1.5s;
+    letter-spacing: 2px;
 }
 
 
@@ -300,13 +307,12 @@ a {
 
 .hero-img {
     width: 400px;
-    height: 500px;
+    height: 100%;
     margin-left: auto;
     transform: translateX(100%);
     opacity: 0;
     animation: slide-left 1s ease-in-out forwards;
     animation-delay: 2s;
-    /* box-shadow: rgba(128, 129, 129, 0.4) 5px 5px, rgba(146, 148, 147, 0.3) 10px 10px, rgba(131, 133, 132, 0.2) 15px 15px, rgba(155, 161, 221, 0.1) 20px 20px, rgba(15, 14, 22, 0.05) 25px 25px; */
 }
 
 @keyframes slide-left {
@@ -317,7 +323,7 @@ a {
 }
 
 .about-box {
-    max-width: 1000px;
+    max-width: 1200px;
 
 }
 
@@ -391,7 +397,7 @@ h2 {
     max-width: 800px;
     margin: 50px auto 0 auto;
     background: #fff;
-    box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+    box-shadow: 0 24px 36px 0 rgba(0, 0, 0, 0.6), 0 8px 12px 0 rgba(0, 0, 0, 0.12), 0 3px 4px 0 rgba(0, 0, 0, 0.04);
     padding: 25px;
     border-radius: 25px;
     height: 400px;
@@ -456,8 +462,8 @@ h2 {
     width: 300px;
     flex-shrink: 0;
     height: 300px;
-    background-image: linear-gradient(147deg, #fe8a39 0%, #fd3838 74%);
-    box-shadow: 4px 13px 30px 1px rgba(252, 56, 56, 0.2);
+    background-image: linear-gradient(147deg, #2f385e 0%, rgba(16, 17, 19, 1) 74%);
+    box-shadow: 0px 0px 20px rgba(95, 87, 87, 0.3);
     border-radius: 20px;
     transform: translateX(-80px);
     overflow: hidden;
@@ -471,7 +477,7 @@ h2 {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(147deg, #fe8a39 0%, #fd3838 74%);
+    background-image: linear-gradient(147deg, #2f385e 0%, rgba(16, 17, 19, 1) 74%);
     border-radius: 20px;
     opacity: 0.8;
 }
@@ -545,11 +551,11 @@ h2 {
 
 .blog-slider__button {
     display: inline-flex;
-    background-image: linear-gradient(147deg, #fe8a39 0%, #fd3838 74%);
+    background-image: linear-gradient(147deg, #2f385e 0%, rgba(16, 17, 19, 1) 74%);
     padding: 15px 35px;
     border-radius: 50px;
     color: #fff;
-    box-shadow: 0px 14px 80px rgba(252, 56, 56, 0.4);
+    box-shadow: 0px 0px 20px rgba(95, 87, 87, 0.3);
     text-decoration: none;
     font-weight: 500;
     justify-content: center;
@@ -612,9 +618,9 @@ h2 {
 
 .swiper-pagination-bullet-active {
     opacity: 1;
-    background: #fd3838;
+    background: #5a4b4b;
     height: 30px;
-    box-shadow: 0px 0px 20px rgba(252, 56, 56, 0.3);
+    box-shadow: 0px 0px 20px rgba(95, 87, 87, 0.3);
 }
 
 @media screen and (max-width: 768px) {
