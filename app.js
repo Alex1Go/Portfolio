@@ -15,3 +15,39 @@ const swiper = new Swiper('.blog-slider', {
     clickable: true,
   },
 });
+
+// Функция для проверки, виден ли элемент
+function isInViewport(element) {
+  const rect = element.getBoundingClientRect();
+  return rect.top <= window.innerHeight && rect.bottom >= 0;
+}
+
+// Анимация для элементов
+function handleScrollAnimation() {
+  const elements = document.querySelectorAll('.hidden');
+  elements.forEach((element, index) => {
+    if (isInViewport(element)) {
+      // Добавляем класс с небольшой задержкой
+      setTimeout(() => {
+        element.classList.add('show');
+      }, index * 200); // Задержка между элементами: 200ms
+    }
+  });
+}
+
+// Запуск анимации при загрузке и скролле
+window.addEventListener('scroll', handleScrollAnimation);
+window.addEventListener('load', handleScrollAnimation);
+
+// Запуск функции при загрузке и скролле
+window.addEventListener('scroll', handleScrollAnimation);
+window.addEventListener('load', handleScrollAnimation);
+
+window.addEventListener('scroll', () => {
+  const parallaxImages = document.querySelectorAll('.parallax');
+  parallaxImages.forEach(image => {
+    const speed = 0.5;
+    const yOffset = window.scrollY * speed;
+    image.style.transform = `translateY(${yOffset}px)`;
+  });
+});

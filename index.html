@@ -19,7 +19,7 @@
 
 <body>
 
-    <header class="">
+    <header class="header">
         <nav class="container nav">
             <a class="nav-link" href="./index.html">Oleksii</a>
             <ul class="nav-list">
@@ -34,22 +34,21 @@
         <section class="hero">
             <div class="container">
                 <div class="hero-fon">
-                    <!-- <div class="line"></div> -->
                     <div class="hero-box">
                         <p class="hero-title">Hello, my name <br>Oleksii Hostryk and I am a</p>
                         <h1 class="hero-name">Fullstack Developer</h1>
                     </div>
-                    <img class="hero-img" src="/images/iam2.png" alt="foto" />
+                    <img class="hero-img " src="/images/iam3.jpg" alt="foto" />
                 </div>
             </div>
 
         </section>
-        <section style="padding-top: 100px" id="about">
-            <div class="container about-box">
-                <h2>About</h2>
-                <div style="display: flex; gap: 30px;">
-                    <img src="./images/dev3.png" alt="devices" style="width: 400px;" />
-                    <p class="about-text">
+        <section style="padding-top: 50px" id="about">
+            <div class="container about-box  ">
+                <h2 class="hidden">About</h2>
+                <div style="display: flex; gap: 30px;" class="hidden">
+                    <img src="./images/dev3.png" alt="devices" style="width: 400px;" class="hidden" />
+                    <p class="about-text hidden">
                         I am creating modern, productive and convenient web applications.
                         I like to solve complex problems, turning ideas into working solutions.
                         I specialize in developing the client and server parts:
@@ -64,21 +63,21 @@
         <section style="padding-top: 100px">
             <div class="container fon-skill" id="skill">
                 <!-- <div class="fon-skill"> -->
-                <h2>Skills</h2>
-                <div class="skill-svg">
-                    <svg width="70px">
+                <h2 class="hidden">Skills</h2>
+                <div class="skill-svg ">
+                    <svg width="70px" class="hidden">
                         <use href="/images/sprite.svg.svg#icon-html"></use>
                     </svg>
                     <svg width="70px">
                         <use href="/images/sprite.svg.svg#icon-css"></use>
                     </svg>
-                    <svg width="70px">
+                    <svg width="70px" class="hidden">
                         <use href="/images/sprite.svg.svg#icon-js"></use>
                     </svg>
                     <svg width="70px">
                         <use href="/images/sprite.svg.svg#icon-react"></use>
                     </svg>
-                    <svg width="70px">
+                    <svg width="70px" class="hidden">
                         <use href="/images/sprite.svg.svg#icon-nodejs"></use>
                     </svg>
                     <svg width="70px">
@@ -98,20 +97,20 @@
         </section>
         <section id="projects" style="padding-top: 100px">
             <div class="container">
-                <h2>Projects</h2>
-                <div class="blog-slider">
-                    <div class="blog-slider__wrp swiper-wrapper">
-                        <div class="blog-slider__item swiper-slide">
-                            <div class="blog-slider__img">
+                <h2 class="hidden">Projects</h2>
+                <div class="blog-slider hidden">
+                    <div class="blog-slider__wrp swiper-wrapper hidden">
+                        <div class="blog-slider__item swiper-slide hidden">
+                            <div class="blog-slider__img hidden">
                                 <img src="./images/img1.png" alt="foto">
                             </div>
                             <div class="blog-slider__content">
                                 <!-- <span class="blog-slider__code">26 December 2019</span> -->
-                                <div class="blog-slider__title">Dragon-project</div>
-                                <div class="blog-slider__text">Dragon-project is a web application that displays
+                                <div class="blog-slider__title hidden">Dragon-project</div>
+                                <div class="blog-slider__text hidden">Dragon-project is a web application that displays
                                     detailed information about the SpaceX Dragon rocket. The project is
                                     built using Vite, JavaScript, Redux, and Redux Toolkit.</div>
-                                <a href="alex1go.github.io/Dragon-project/" class="blog-slider__button">OPEN</a>
+                                <a href="alex1go.github.io/Dragon-project/" class="blog-slider__button hidden">OPEN</a>
                                 <a href="https://github.com/Alex1Go/Dragon-project">
                                     <svg width="28" height="28">
                                         <use href="./images/sprite.svg.svg#icon-github"></use>
@@ -180,6 +179,7 @@
                 </div>
             </div>
         </section>
+
     </main>
     <footer>
         <div class="container ">
@@ -191,7 +191,6 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
     <script src="./app.js"></script>
 
 
