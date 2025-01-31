@@ -158,7 +158,7 @@ a {
 .nav-item:hover,
 .nav-item:focus {
     background:
-        #282930;
+        #201e2b;
 }
 
 .nav-item:hover .item-link,
@@ -220,9 +220,9 @@ a {
 
 .nav-link,
 .item-link {
-    font-family: "Comfortaa", sans-serif;
-    font-weight: 600;
-    font-size: 10px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    font-size: 11px;
     line-height: 1.2;
     font-style: normal;
     text-transform: uppercase;
@@ -233,7 +233,7 @@ a {
 .hero {
     /* position: relative; */
     padding-top: 65px;
-    padding-bottom: 50px;
+    /* padding-bottom: 50px; */
     overflow: hidden;
 }
 
@@ -272,7 +272,8 @@ a {
     animation: slide-up-title 1s ease-in-out forwards;
     animation-delay: 2s;
     letter-spacing: 1.5px;
-    color: #483273;
+    color: #5e32b3;
+    /* color: #483273; */
 }
 
 
@@ -337,26 +338,27 @@ section {
 }
 
 h2 {
-    font-family: " PT Serif", serif;
+    font-family: "Volkhov", sans-serif;
     font-weight: 700;
     font-style: normal;
     font-size: 30px;
     line-height: 1.2;
     text-align: center;
     text-transform: uppercase;
-    letter-spacing: 4px;
+    letter-spacing: 10px;
+    margin-bottom: 50px;
 }
 
 .about-box {
     max-width: 1100px;
     display: flex;
-    gap: 50px;
+    gap: 100px;
     align-items: center;
     margin: 0 auto;
 }
 
 .about-title {
-    margin-bottom: 20px;
+    margin-bottom: 100px;
 }
 
 .about-text {
@@ -376,20 +378,17 @@ h2 {
     /* height: 400px;
     max-width: 1250px;
     width: 100%; */
-    padding: 105px 100px;
+    padding: 95px 100px;
 }
 
 .skill-svg {
-    margin-top: 50px;
-    /* display: flex;
-    flex-direction: row;
-    justify-content: space-between; */
     align-items: center;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
+    justify-items: center;
+    grid-column-gap: 50px;
+    grid-row-gap: 50px;
 }
 
 .skill-svg svg {
@@ -403,7 +402,7 @@ h2 {
     background-size: contain;
     width: 1250px;
     height: 600px;
-    padding: 100px 120px;
+    padding: 100px 120px 0 120px;
 }
 
 .footer_box-svg {
@@ -420,6 +419,10 @@ h2 {
     fill: #42446e;
 }
 
+.footer svg:hover {
+    fill: #e9e9f1;
+}
+
 .footer-text {
     font-family: " PT Serif", serif;
     font-weight: 700;
@@ -429,7 +432,9 @@ h2 {
     text-align: left;
     text-transform: uppercase;
     letter-spacing: 3px;
+    margin-top: 150px;
     margin-bottom: 20px;
+
 }
 
 
@@ -594,7 +599,7 @@ h2 {
 .blog-slider__title {
     font-size: 24px;
     font-weight: 700;
-    color: #483273;
+    color: #6d44bd;
     margin-bottom: 20px;
 }
 
@@ -613,27 +618,21 @@ h2 {
 .blog-slider__button {
     display: inline-flex;
     box-shadow: 5px 5px 7px #0b0b0e, -3px -3px 5px #4c4960;
-    padding: 10px 35px;
-    border-radius: 50px;
-    color: #e0e0e0;
-    text-decoration: none;
-    font-weight: 700;
-    justify-content: center;
-    text-align: center;
-    letter-spacing: 1px;
-}
-
-.blog-slider__button-2 {
-    display: inline-flex;
-    box-shadow: 5px 5px 7px #0b0b0e, -3px -3px 5px #4c4960;
     width: 128px;
     height: 42px;
     border-radius: 50px;
+    color: #e0e0e0;
     text-decoration: none;
+    font-family: "PT Serif", serif;
+    font-weight: 700;
+    font-size: 20px;
     justify-content: center;
     text-align: center;
     align-items: center;
+    letter-spacing: 3px;
 }
+
+
 
 @media screen and (max-width: 576px) {
     .blog-slider__button {
@@ -641,13 +640,20 @@ h2 {
     }
 }
 
-.blog-slider__button-box a:hover,
-.blog-slider__button-box a:focus {
-    color: #483273;
+.blog-slider__button-box :hover,
+.blog-slider__button-box :focus {
+    background: #201e2b;
+    color: #944ae9;
+
 }
 
-.blog-slider__button-box a:active {
-    color: #483273;
+.blog-slider__button-2:hover svg,
+.blog-slider__button-2:focus svg {
+    fill: #944ae9;
+}
+
+.blog-slider__button-box :active {
+    color: #944ae9;
     box-shadow: inset 3px 3px 5px #0b0b0e,
         inset -2px -2px 3px #444255;
     transform: translateY(0.5px);
