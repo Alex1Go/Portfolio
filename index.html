@@ -5,11 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Open+Sans:wght@300..800&family=PT+Serif:wght@400;700&family=Volkhov:wght@400;700&display=swap"
-        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
         integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -37,6 +32,12 @@
                     <div class="hero-box">
                         <p class="hero-title">Hello, my name <br>Oleksii Hostryk and I am a</p>
                         <h1 class="hero-name">Fullstack Developer</h1>
+                        <a href="/images/Oleksii_Hostryk.pdf" download="Oleksii_Hostryk.pdf" class="hero-resume hidden">
+                            Download CV
+                            <svg class="hero-resume-svg">
+                                <use href="/images/sprite.svg#icon-downloud"></use>
+                            </svg>
+                        </a>
                     </div>
                     <img class="hero-img " src="/images/iam3.jpg" alt="foto" />
                 </div>
@@ -46,9 +47,9 @@
         <section class="about" id="about">
             <div class="container  ">
                 <h2 class="about-title hidden">About</h2>
-                <div class="about-box">
+                <div class="about-box hidden">
                     <img src="./images/dev3.png" alt="devices" style="width: 400px;" class="hidden" />
-                    <p class="about-text hidden">
+                    <p class="about-text ">
                         I am creating modern, productive and convenient web applications.
                         I like to solve complex problems, turning ideas into working solutions.
                         I specialize in developing the client and server parts:
@@ -109,9 +110,9 @@
                             <title>Figma</title>
                             <use href="/images/sprite.svg#icon-figma"></use>
                         </svg>
-                        <svg width="150px">
+                        <svg>
                             <title>MongoDB</title>
-                            <use href="/images/sprite.svg#icon-mongodb-logo-svgrepo-com"></use>
+                            <use href="/images/sprite.svg#icon-mongodb-svgrepo-com"></use>
                         </svg>
                     </div>
 
@@ -223,39 +224,58 @@
     <footer>
         <div class="container">
             <div class="footer" id="contacts">
-                <h3 class="footer-text hidden">Let's connect</h3>
-                <p>For any questionn, please connect with me</p>
-                <p>For more info, here's my resume</p>
-                <div class="footer_box-svg hidden  ">
-                    <a href="">
-                        <svg>
-                            <use href="/images/sprite.svg#icon-mail"></use>
-                        </svg></a>
-                    <a href="https://www.linkedin.com/in/oleksii-hostryk/" target="_blank">
-                        <svg>
-                            <use href="/images/sprite.svg#icon-linkedin-2"></use>
-                        </svg>
-                    </a>
-                    <a href="https://github.com/Alex1Go" target="_blank">
-                        <svg>
-                            <use href="/images/sprite.svg#icon-github_git"></use>
-                        </svg></a>
-                    <a href="https://t.me/Alex1Go">
-                        <svg>
-                            <use href="/images/sprite.svg#icon-telegram"></use>
+                <h3 class="footer-tittle hidden">Let's connect</h3>
+                <p class="footer-text hidden">For any questionn, please connect with me</p>
+                <p class="footer-text hidden">For more info, here's my resume</p>
+                <div class="footer_button-box hidden">
+                    <a href="/images/Oleksii_Hostryk.pdf" download="Oleksii_Hostryk.pdf" class="footer-resume">
+                        Download CV
+                        <svg style="width: 20px; height: 20px; margin-left:10px">
+                            <use href="/images/sprite.svg#icon-downloud"></use>
                         </svg>
                     </a>
 
+                    <div class="footer_box-svg ">
+                        <button class="footer-link" id="email-icon">
+                            <svg>
+                                <use href="/images/sprite.svg#icon-mail"></use>
+                            </svg></button>
+                        <a href="https://www.linkedin.com/in/oleksii-hostryk/" target="_blank">
+                            <svg>
+                                <use href="/images/sprite.svg#icon-linkedin-2"></use>
+                            </svg>
+                        </a>
+                        <a href="https://github.com/Alex1Go" target="_blank">
+                            <svg>
+                                <use href="/images/sprite.svg#icon-github_git"></use>
+                            </svg></a>
+                        <a href="https://t.me/Alex1Go">
+                            <svg>
+                                <use href="/images/sprite.svg#icon-telegram"></use>
+                            </svg>
+                        </a>
+
+                    </div>
                 </div>
-
             </div>
-            <p>Design and production by Oleksii Hostryk 2025</p>
+            <p class="footer_after-text hidden">Design and production by &copy; Oleksii Hostryk 2025</p>
         </div>
 
     </footer>
-
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Write Here</h2>
+            <form id="contact-form">
+                <input type="text" name="name" placeholder="Name" required />
+                <input type="email" name="email" placeholder="Email" required />
+                <textarea name="message" placeholder="Message" required></textarea>
+                <button type="submit" class="modal-button">Send</button>
+            </form>
+        </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="./app.js"></script>
+    <script type="module" src="/main.js/app.js"></script>
 
 
 </body>

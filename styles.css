@@ -1,3 +1,35 @@
+@font-face {
+    font-family: 'PT Serif';
+    src: url('/fonts/PT_Serif/PTSerif-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PT Serif';
+    src: url('/fonts/PT_Serif/PTSerif-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Volkhov';
+    src: url('/fonts/Volkhov/Volkhov-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Volkhov';
+    src: url('/fonts/Volkhov/Volkhov-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
 body {
     background-color: #191820;
     /* background: #e0e0e0; */
@@ -9,43 +41,6 @@ body {
     color: #e0e0e0;
 }
 
-/* .pt-serif-regular {
-    font-family: "PT Serif", serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.pt-serif-bold {
-    font-family: "PT Serif", serif;
-    font-weight: 700;
-    font-style: normal;
-} */
-/* .volkhov-regular {
-    font-family: "Volkhov", serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.volkhov-bold {
-    font-family: "Volkhov", serif;
-    font-weight: 700;
-    font-style: normal;
-} */
-
-/* .open-sans-<uniquifier> {
-    font-family: "Open Sans", serif;
-    font-optical-sizing: auto;
-    font-weight: 300-800;
-    font-style: normal;
-    font-variation-settings:
-        "wdth" 100;
-} */
-/* .comfortaa-<uniquifier> {
-     font-family: "Comfortaa", serif;
-     font-optical-sizing: auto;
-     font-weight: 300-700;
-     font-style: normal;
- } */
 * {
     box-sizing: border-box;
 }
@@ -99,18 +94,6 @@ a {
 
 }
 
-/* .hidden:nth-child(1) {
-    transition-delay: 0.2s;
-}
-
-.hidden:nth-child(2) {
-    transition-delay: 0.3s;
-}
-
-.hidden:nth-child(3) {
-    transition-delay: 0.4s;
-} */
-
 .header {
     position: fixed;
     z-index: 100;
@@ -127,6 +110,7 @@ a {
 .nav {
     margin: auto;
     display: flex;
+    align-items: center;
     padding: 20px 0;
     width: 100%;
     max-width: 1000px;
@@ -171,14 +155,6 @@ a {
         inset -2px -2px 3px #444255;
     transform: translateY(0.5px);
 }
-
-/* .nav-item:active {
-    transform: translateY(2px);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6),
-        0 2px 4px 0 rgba(0, 0, 0, 0.12),
-        0 1px 1px 0 rgba(0, 0, 0, 0.04);
-    background-color: #121317;
-} */
 
 /* Псевдоэлемент для отблеска */
 .nav-item::after {
@@ -264,6 +240,7 @@ a {
 }
 
 .hero-name {
+    font-family: "Volkhov", sans-serif;
     font-size: 50px;
     font-weight: 800;
     line-height: 1.2;
@@ -271,12 +248,51 @@ a {
     opacity: 0;
     animation: slide-up-title 1s ease-in-out forwards;
     animation-delay: 2s;
-    letter-spacing: 1.5px;
-    color: #5e32b3;
+    letter-spacing: 2px;
+    /* color: #5e32b3; */
     /* color: #483273; */
+    -webkit-text-fill-color: transparent;
+    background: linear-gradient(0deg, rgb(228 121 255 / 70%) 0%, rgb(162 12 245 / 73%) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
 }
 
+.hero-resume {
+    display: inline-flex;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #e0e0e0;
+    background: transparent;
+    box-shadow: 3px 3px 5px #0b0b0e,
+        -2px -2px 4px #3b394b;
+    border-radius: 20px;
+    align-items: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin-top: 40px;
+    transform: translateY(100%);
+    opacity: 0;
+    animation: slide-up-title 1s ease-in-out forwards;
+    animation-delay: 2s;
+}
 
+.hero-resume:hover,
+.hero-resume:focus {
+    background:
+        #201e2b;
+    color: #b176f5;
+}
+
+.hero-resume-svg {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+}
+
+.hero-resume:active {
+    box-shadow: inset 3px 3px 5px #0b0b0e,
+        inset -2px -2px 3px #444255;
+    transform: translateY(0.5px);
+}
 
 /* @keyframes line-expand {
     to {
@@ -395,35 +411,21 @@ h2 {
     height: 60px;
 }
 
+footer {
+    padding-bottom: 30px;
+}
+
 .footer {
     background-image: url(./images/fon_6.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
     width: 1250px;
-    height: 600px;
+    height: 550px;
     padding: 100px 120px 0 120px;
 }
 
-.footer_box-svg {
-    display: flex;
-    width: 250px;
-    height: 40px;
-    justify-content: space-between;
-    margin-left: auto;
-}
-
-.footer svg {
-    width: 40px;
-    height: 100%;
-    fill: #42446e;
-}
-
-.footer svg:hover {
-    fill: #e9e9f1;
-}
-
-.footer-text {
+.footer-tittle {
     font-family: " PT Serif", serif;
     font-weight: 700;
     font-style: normal;
@@ -432,9 +434,74 @@ h2 {
     text-align: left;
     text-transform: uppercase;
     letter-spacing: 3px;
-    margin-top: 150px;
-    margin-bottom: 20px;
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
 
+.footer-text {
+    margin-bottom: 10px;
+}
+
+.footer_button-box {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.footer-resume {
+    display: inline-flex;
+    padding: 10px 20px;
+    font-size: 20px;
+    color: #e0e0e0;
+    height: 50px;
+    /* background: #8330b569; */
+    /* background: linear-gradient(180deg, rgb(129 63 155 / 40%) 0%, rgb(67 41 86 / 16%) 100%); */
+    background: linear-gradient(0deg, rgb(155 92 179 / 60%) 0%, rgb(14 10 16 / 33%) 100%);
+    border-radius: 20px;
+    align-items: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.footer-resume:hover,
+.footer-resume:focus {
+    box-shadow: 3px 3px 5px #0b0b0e,
+        -2px -2px 4px #a68ad8;
+}
+
+.footer-resume:active {
+    box-shadow: inset 3px 3px 5px #0b0b0e,
+        inset -2px -2px 3px #a68ad8;
+    transform: translateY(0.5px);
+}
+
+
+.footer_box-svg {
+    display: flex;
+    width: 300px;
+    height: 50px;
+    background: transparent;
+    justify-content: space-evenly;
+}
+
+.footer svg {
+    width: 40px;
+    height: 100%;
+    fill: #e9e9f1;
+
+}
+
+.footer svg:hover {
+    fill: #3b124a9c;
+}
+
+.footer-link {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.footer_after-text {
+    text-align: center;
 }
 
 
@@ -442,12 +509,7 @@ h2 {
 
 
 
-
-
-
-
-
-
+/* ------ slider------ */
 
 .blog-slider {
     width: 95%;
@@ -599,8 +661,12 @@ h2 {
 .blog-slider__title {
     font-size: 24px;
     font-weight: 700;
-    color: #6d44bd;
+    color: rgb(177, 118, 245);
     margin-bottom: 20px;
+    /* -webkit-text-fill-color: transparent;
+    background: linear-gradient(0deg, rgb(228 121 255 / 70%) 0%, rgb(162 12 245 / 73%) 100%);
+    -webkit-background-clip: text;
+    background-clip: text; */
 }
 
 .blog-slider__text {
@@ -723,3 +789,77 @@ h2 {
         width: 30px;
     }
 }
+
+/* Modal Email Window */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: rgba(0, 0, 0, 0.5); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: #30253c6e;
+    backdrop-filter: blur(10px);
+    padding: 80px 50px;
+    border-radius: 10px;
+    text-align: center;
+    width: 500px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+textarea,
+input {
+    background-color: transparent;
+    margin-bottom: 15px;
+}
+
+.modal-button {
+    display: inline-flex;
+    background-color: transparent;
+    width: 140px;
+    height: 42px;
+    border: none;
+    border-radius: 40px;
+    color: #e0e0e0;
+    box-shadow: 5px 5px 7px #0b0b0e, -3px -3px 5px #a68bc5;
+    text-decoration: none;
+    font-family: "PT Serif", serif;
+    font-weight: 700;
+    font-size: 20px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    letter-spacing: 3px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+
+}
+
+/* footer {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+} */
+
+/* #email-icon {
+    cursor: pointer;
+    font-size: 2rem;
+} */
