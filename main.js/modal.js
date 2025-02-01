@@ -1,27 +1,17 @@
-document.getElementById('email-icon').addEventListener('click', function () {
-  document.getElementById('modal').style.display = 'flex';
+const modal = document.querySelector('.modal');
+const openBtn = document.querySelector('.modal-button');
+const closeBtn = document.querySelector('.close');
+
+openBtn.addEventListener('click', () => {
+  modal.classList.add('active'); // Показываем модалку
 });
 
-document.querySelector('.close').addEventListener('click', function () {
-  document.getElementById('modal').style.display = 'none';
+closeBtn.addEventListener('click', () => {
+  modal.classList.remove('active'); // Скрываем модалку
 });
 
-window.addEventListener('click', function (e) {
-  if (e.target === document.getElementById('modal')) {
-    document.getElementById('modal').style.display = 'none';
+window.addEventListener('click', e => {
+  if (e.target === modal) {
+    modal.classList.remove('active'); // Закрытие при клике вне модалки
   }
-});
-
-// отправкa формы
-
-document.getElementById('contact-form').addEventListener('submit', function (e) {
-  e.preventDefault();
-
-  emailjs
-    .sendForm('service_id', 'template_id', this, 'user_id')
-    .then(() => {
-      alert('Сообщение отправлено!');
-      document.getElementById('modal').style.display = 'none';
-    })
-    .catch(() => alert('Ошибка отправки.'));
 });

@@ -386,7 +386,7 @@ h2 {
 }
 
 .fon-skill {
-    background-image: url(/images/fon_4.png);
+    background-image: url(./images/fon_4.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -797,9 +797,12 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    /* background: rgba(0, 0, 0, 0.5); */
     align-items: center;
     justify-content: center;
+}
+
+.modal.active {
+    display: flex;
 }
 
 .modal-content {
