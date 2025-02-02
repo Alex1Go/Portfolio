@@ -35,8 +35,6 @@
     --text-color: #e0e0e0;
     --accent-color: #b176f5;
     --link-hover: #cd9eff;
-    --container-max-width: 1200px;
-    --padding: 20px;
     --gap: 20px;
     --border-radius: 10px;
     --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
@@ -84,9 +82,9 @@ img {
 }
 
 .container {
-    max-width: var(--container-max-width);
+    width: 1280px;
     margin: 0 auto;
-    padding: 0 var(--padding);
+    padding: 0 15px;
 }
 
 .button {
@@ -682,13 +680,6 @@ footer {
     transition: all 0.4s;
 }
 
-.blog-slider__code {
-    color: #7b7992;
-    margin-bottom: 15px;
-    display: block;
-    font-weight: 500;
-}
-
 .blog-slider__title {
     font-size: 24px;
     font-weight: 700;
@@ -832,17 +823,20 @@ footer {
     justify-content: center;
 }
 
-.modal.active {
+/* .modal.active {
     display: flex;
-}
+} */
 
 .modal-content {
     background-color: #30253c6e;
     backdrop-filter: blur(10px);
-    padding: 80px 50px;
+    padding: 30px 70px;
     border-radius: 10px;
-    text-align: center;
     width: 500px;
+}
+
+.modal-content h2 {
+    margin-bottom: 20px;
 }
 
 form {
@@ -850,40 +844,145 @@ form {
     flex-direction: column;
 }
 
-textarea,
-input {
-    background-color: transparent;
-    margin-bottom: 15px;
+.btn-modal {
+    position: absolute;
+    display: flex;
+    top: 24px;
+    right: 24px;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    background: transparent;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+}
+
+.modal-svg {
+    fill: var(--text-color);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-modal:hover .modal-svg,
+.btn-modal:focus .modal-svg {
+    transform: scale(1.5);
+}
+
+
+.form-label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.modal-label-text {
+    display: block;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.04em;
+    color: var(--text-color);
+    margin-bottom: 4px;
+}
+
+.modal-form-svg {
+    position: relative;
+}
+
+.form-input {
+    width: 100%;
+    height: 40px;
+    color: var(--text-color);
+    background-color: transparent !important;
+    border: none;
+    border-radius: 4px;
+    box-shadow: inset 5px 5px 7px #0b0b0e94, inset -3px -3px 5px #594d676e;
+    padding: 8px 16px 8px 38px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input-svg {
+    display: block;
+    position: absolute;
+    fill: var(--text-color);
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--text-color);
+}
+
+.form-input:focus+.input-svg {
+    fill: var(--accent-color);
+}
+
+.form-textarea {
+    display: block;
+    margin-bottom: 16px;
+}
+
+.form-textarea .form-input {
+    display: block;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.04em;
+    padding: 8px 16px;
+    color: var(--text-color);
+    height: 120px;
+    resize: none;
+
+}
+
+.form-textarea::placeholder {
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.04em;
+    color: rgba(117, 117, 117, 0.5);
 }
 
 .modal-button {
     display: inline-flex;
     background-color: transparent;
     width: 140px;
-    height: 42px;
+    height: 40px;
     border: none;
     border-radius: 40px;
     color: var(--text-color);
-    box-shadow: 5px 5px 7px #0b0b0e, -3px -3px 5px #a68bc5;
+    box-shadow: 5px 5px 7px #17171ef0, -3px -3px 5px #62576f;
     text-decoration: none;
     font-family: "PT Serif", serif;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 18px;
     justify-content: center;
     text-align: center;
     align-items: center;
     letter-spacing: 3px;
     margin: 0 auto;
     cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.close {
+.modal-button:hover,
+.modal-button:focus {
+    background-color: #53385ca3;
+}
+
+.modal-button:active {
+    box-shadow: inset 3px 3px 5px #0b0b0e, inset -2px -2px 3px #444255;
+    transform: translateY(0.5px);
+}
+
+/* .close {
     position: absolute;
     top: 20px;
     right: 20px;
     cursor: pointer;
 
-}
+} */
 
 /* footer {
     position: fixed;
