@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'PT Serif';
-    src: url('/fonts/PT_Serif/PTSerif-Regular.woff2') format('woff2');
+    src: url('./fonts/PT_Serif/PTSerif-Regular.woff2') format('woff2');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -8,7 +8,7 @@
 
 @font-face {
     font-family: 'PT Serif';
-    src: url('/fonts/PT_Serif/PTSerif-Bold.woff2') format('woff2');
+    src: url('./fonts/PT_Serif/PTSerif-Bold.woff2') format('woff2');
     font-weight: 700;
     font-style: normal;
     font-display: swap;
@@ -16,7 +16,7 @@
 
 @font-face {
     font-family: 'Volkhov';
-    src: url('/fonts/Volkhov/Volkhov-Regular.woff2') format('woff2');
+    src: url('./fonts/Volkhov/Volkhov-Regular.woff2') format('woff2');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -24,7 +24,7 @@
 
 @font-face {
     font-family: 'Volkhov';
-    src: url('/fonts/Volkhov/Volkhov-Bold.woff2') format('woff2');
+    src: url('./fonts/Volkhov/Volkhov-Bold.woff2') format('woff2');
     font-weight: 700;
     font-style: normal;
     font-display: swap;
@@ -975,6 +975,22 @@ form {
     box-shadow: inset 3px 3px 5px #0b0b0e, inset -2px -2px 3px #444255;
     transform: translateY(0.5px);
 }
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: inset 5px 5px 7px #0b0b0e94, inset -3px -3px 5px #594d676e;
+    -webkit-text-fill-color: var(--text-color) !important;
+    /* Цвет текста */
+    transition: background-color 5000s ease-in-out 0s !important;
+    /* Убирает анимацию изменения фона */
+    background-color: transparent !important;
+    /* Устанавливает нужный фон */
+    color: var(--text-color) !important;
+    /* Цвет текста для совместимости */
+}
+
 
 /* .close {
     position: absolute;
