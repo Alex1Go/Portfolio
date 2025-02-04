@@ -312,17 +312,18 @@ img {
         -2px -2px 4px #3b394b;
     border-radius: 20px;
     align-items: center;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
     margin-top: 40px;
     transform: translateY(100%);
     opacity: 0;
     animation: slide-up-title 1s ease-in-out forwards;
     animation-delay: 2s;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-resume:hover,
 .hero-resume:focus {
-    background:
+    background-color:
         #201e2b;
     color: #b176f5;
 }
@@ -516,9 +517,10 @@ footer {
     width: 40px;
     height: 100%;
     fill: var(--text-color);
-
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.footer svg:focus,
 .footer svg:hover {
     fill: #3b124a9c;
 }
@@ -532,9 +534,6 @@ footer {
 .footer_after-text {
     text-align: center;
 }
-
-
-
 
 
 
@@ -685,10 +684,6 @@ footer {
     font-weight: 700;
     color: rgb(177, 118, 245);
     margin-bottom: 20px;
-    /* -webkit-text-fill-color: transparent;
-    background: linear-gradient(0deg, rgb(228 121 255 / 70%) 0%, rgb(162 12 245 / 73%) 100%);
-    -webkit-background-clip: text;
-    background-clip: text; */
 }
 
 .blog-slider__text {
@@ -717,6 +712,7 @@ footer {
     text-align: center;
     align-items: center;
     letter-spacing: 3px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -729,7 +725,7 @@ footer {
 
 .blog-slider__button-box :hover,
 .blog-slider__button-box :focus {
-    background: #201e2b;
+    background-color: #201e2b;
     color: #944ae9;
 
 }
@@ -750,6 +746,7 @@ footer {
     width: 32px;
     height: 32px;
     fill: var(--text-color);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 /* .blog-slider__pagination {
@@ -910,6 +907,7 @@ form {
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.form-input:hover,
 .form-input:focus {
     outline: none;
     border-color: var(--text-color);
@@ -962,8 +960,7 @@ form {
     letter-spacing: 3px;
     margin: 0 auto;
     cursor: pointer;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-button:hover,
