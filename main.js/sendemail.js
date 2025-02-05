@@ -4,7 +4,7 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
   e.preventDefault();
 
   emailjs
-    .sendForm('service_07eoiv8', 'template_2diarit', this)
+    .sendForm('service_uot8wkk', 'template_2diarit', this)
     .then(() => {
       alert(' Message sent!');
       this.reset();
