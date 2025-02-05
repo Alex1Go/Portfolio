@@ -129,6 +129,7 @@ img {
     }
 }
 
+
 .hidden {
     opacity: 0;
     transform: translateY(30px);
@@ -158,6 +159,7 @@ img {
 .nav {
     margin: auto;
     display: flex;
+    justify-content: space-between;
     align-items: center;
     padding: 20px 0;
     width: 100%;
@@ -166,8 +168,9 @@ img {
 
 .nav-list {
     display: flex;
-    margin-left: auto;
+    /* margin-left: auto; */
     gap: 20px;
+
 }
 
 .nav-item {
