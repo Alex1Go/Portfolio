@@ -30,6 +30,15 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'Open Sans';
+    src: url('./fonts/Open_Sans/OpenSans-Bold.woff2') format('woff2'),
+        url('./fonts/Open_Sans/OpenSans-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
 :root {
     --bg-color: #191820;
     --text-color: #e0e0e0;
@@ -161,9 +170,16 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
+    padding: 10px 0;
     width: 100%;
     max-width: 1000px;
+}
+
+.nav-link:hover .nav-logo {
+    background-image: url(./images/icons8-96.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .nav-list {
@@ -244,7 +260,7 @@ img {
     }
 }
 
-.nav-link,
+
 .item-link {
     font-family: "Open Sans", sans-serif;
     font-weight: 700;
@@ -257,21 +273,22 @@ img {
 }
 
 .hero {
-    padding-top: 65px;
+    padding-top: 70px;
     overflow: hidden;
 }
 
 .hero-fon {
-    position: relative;
+    /* position: relative; */
     display: flex;
+    justify-content: space-between;
     height: 500px;
 }
 
 .hero-box {
     margin: auto 0;
     width: 100%;
-    max-width: 600px;
-    padding: 20px;
+    max-width: 550px;
+    padding-left: 20px;
 }
 
 .hero-title {
@@ -365,11 +382,11 @@ img {
 }
 
 .hero-img {
-    position: absolute;
+    /* position: absolute; */
     overflow: auto;
     height: 500px;
-    top: 0;
-    left: 45%;
+    /* top: 0;
+    left: 45%; */
     transform: translateX(100%);
     opacity: 0;
     animation: slide-left 1.2s ease-in-out forwards;
